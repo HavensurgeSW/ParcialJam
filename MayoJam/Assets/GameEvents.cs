@@ -11,6 +11,7 @@ public class GameEvents : MonoBehaviour
     public TMP_Text scoreText;
     private int score;
     public ParticleSystem bloodSpat;
+  
 
     public static GameEvents current;
     public static Action<Enemy> OnEnemyKilled;
@@ -23,7 +24,14 @@ public class GameEvents : MonoBehaviour
         {
             coins[i].Init(TriggerScoreUI);
         }
-        
+       
+
+        if (PlayerPrefs.HasKey("PlayerScore")) {
+
+            score = PlayerPrefs.GetInt("PlayerScore");
+            scoreText.text = "Score: " + score;
+        }
+
     }
 
     void OnEnable()
@@ -48,6 +56,7 @@ public class GameEvents : MonoBehaviour
 
     private void TriggerScoreUI() {
         score++;
+        PlayerPrefs.SetInt("PlayerScore", score);
         scoreText.text = "Score: " + score;
     }
 
