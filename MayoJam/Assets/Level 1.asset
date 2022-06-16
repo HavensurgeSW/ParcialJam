@@ -18,3 +18,6 @@ MonoBehaviour:
   - {x: 3, y: 0.84, z: 4}
   - {x: -6, y: 0.84, z: 3}
   - {x: -7, y: 0.84, z: -5}
+  prefab:
+  - {fileID: 2963495084693000819, guid: e91f410b1c4eb9d4f9b86247f8e1cb09, type: 3}
+  - {fileID: 2963495084693000819, guid: 6b13e94018c53aa4b98994e58d8db7eb, type: 3}
